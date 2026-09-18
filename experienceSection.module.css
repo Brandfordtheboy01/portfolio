@@ -1,0 +1,103 @@
+.experiencesection {
+  position: relative;
+  min-height: 450px;
+  background: #ffffff;
+  font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  overflow: hidden;
+}
+
+.container {
+  display: flex;
+  max-width: 1400px;
+  margin: 0 auto;
+  min-height: 450px;
+}
+
+.leftSide {
+  flex: 1;
+  background: #f0f2f2;
+  padding: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.rightSide {
+  flex: 1;
+  background: #ffffff;
+  padding: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.experience {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #dd5928;
+  margin-bottom: 2rem;
+  line-height: 1.5;
+}
+
+.description {
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: #000000;
+  line-height: 1.8;
+  max-width: 600px;
+}
+
+.companyLogo {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  margin-bottom: 1.5rem;
+}
+
+.date {
+  font-size: 0.75rem;
+  font-weight: 300;
+  color: #a6a6a6;
+  text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .leftSide,
+  .rightSide {
+    padding: 3rem 2rem;
+  }
+
+  .experience {
+    font-size: 2rem;
+  }
+
+  .description {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .leftSide,
+  .rightSide {
+    padding: 2rem 1.5rem;
+  }
+
+  .experience {
+    font-size: 1.75rem;
+  }
+
+  .description {
+    font-size: 0.75rem;
+  }
+
+  .companyLogo {
+    max-width: 300px;
+  }
+}
+
