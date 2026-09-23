@@ -1,14 +1,15 @@
 import styles from './aboutSection.module.css'
+import { useScrollAnimation } from './src/hooks/useScrollAnimation'
 
 function About() {
+    const sectionRef = useScrollAnimation()
+
     return (
-        <div className={styles.aboutsection}>
+        <div className={styles.aboutsection} id="about" ref={sectionRef}>
             <div className={styles.container}>
-                {/* <div className={styles.aboutme}>ABOUT ME</div> */}
-                
                 <div className={styles.content}>
                     <div className={styles.leftColumn}>
-                        <div className={styles.section}>
+                        <div className={styles.section} data-animation="slideInLeft">
                             <h3 className={styles.sectionTitle}>Education</h3>
                             <p className={styles.sectionContent}>
                                 I'm Henry Brandford, a computer science student passionate about creating beautiful, 
@@ -17,7 +18,7 @@ function About() {
                             </p>
                         </div>
                         
-                        <div className={styles.section}>
+                        <div className={styles.section} data-animation="slideInLeft">
                             <h3 className={styles.sectionTitle}>Career</h3>
                             <p className={styles.sectionContent}>
                                 I'm currently an intern gaining hands-on experience in frontend and backend development. 
@@ -28,7 +29,7 @@ function About() {
                     </div>
                     
                     <div className={styles.rightColumn}>
-                        <div className={styles.section}>
+                        <div className={styles.section} data-animation="slideInRight">
                             <h3 className={styles.sectionTitle}>What I do the Most</h3>
                             <p className={styles.sectionContent}>
                                 When I'm not coding, you can find me exploring new technologies, contributing to open-source 
@@ -37,7 +38,7 @@ function About() {
                             </p>
                         </div>
                         
-                        <div className={styles.section}>
+                        <div className={styles.section} data-animation="slideInRight">
                             <h3 className={styles.sectionTitle}>What I do the Most</h3>
                             <p className={styles.sectionContent}>
                                 I enjoy building personal projects, solving coding challenges, and sharing knowledge with 

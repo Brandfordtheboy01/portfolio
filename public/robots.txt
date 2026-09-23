@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /src/
+Disallow: /node_modules/
+Disallow: /.git/
+
+Sitemap: https://your-portfolio.vercel.app/sitemap.xml

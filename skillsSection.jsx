@@ -2,7 +2,7 @@ import styles from "./skillsSection.module.css"
 
 function Skills() {
     return (
-        <div className={styles.skillssection}>
+        <div className={styles.skillssection} id="skills">
             <div className={styles.container}>
                 <h2 className={styles.sectionTitle}>Skills</h2>
                 
