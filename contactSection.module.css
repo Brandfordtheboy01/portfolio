@@ -1,0 +1,175 @@
+.contactSection {
+  display: flex;
+  width: 100%;
+  min-height: 325px;
+  background: #000000;
+  font-family: 'Poppins', sans-serif;
+  padding: 60px 80px;
+  box-sizing: border-box;
+}
+
+.leftColumn {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-right: 40px;
+}
+
+.letsConnect {
+  font-size: 23px;
+  font-weight: 400;
+  color: #ffffff;
+  margin: 0 0 20px 0;
+  line-height: 34px;
+}
+
+.headline {
+  font-size: 48px;
+  font-weight: 700;
+  color: #00e676;
+  margin: 0;
+  line-height: 50px;
+}
+
+.rightColumn {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 40px;
+}
+
+.contentRow {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.description {
+  font-size: 14px;
+  font-weight: 400;
+  color: #ffffff;
+  line-height: 1.6;
+  margin: 0;
+  max-width: 400px;
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 30px;
+  background: #295dff;
+  border: none;
+  border-radius: 34px;
+  color: #ffffff;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  text-decoration: none;
+}
+
+.button:hover {
+  background: #1e4bef;
+}
+
+.arrowIcon {
+  background: #00e676;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  color: #ffffff;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .contactSection {
+    padding: 40px 60px;
+  }
+
+  .headline {
+    font-size: 36px;
+    line-height: 42px;
+  }
+
+  .contentRow {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .description {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .contactSection {
+    padding: 30px 40px;
+    flex-direction: column;
+  }
+
+  .leftColumn {
+    padding-right: 0;
+    margin-bottom: 30px;
+  }
+
+  .rightColumn {
+    padding-left: 0;
+  }
+
+  .letsConnect {
+    font-size: 20px;
+  }
+
+  .headline {
+    font-size: 28px;
+    line-height: 36px;
+  }
+
+  .description {
+    font-size: 13px;
+  }
+
+  .button {
+    padding: 10px 24px;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contactSection {
+    padding: 20px;
+  }
+
+  .letsConnect {
+    font-size: 18px;
+  }
+
+  .headline {
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  .description {
+    font-size: 12px;
+  }
+
+  .button {
+    padding: 8px 20px;
+    font-size: 12px;
+  }
+
+  .arrowIcon {
+    width: 24px;
+    height: 24px;
+    font-size: 14px;
+  }
+}

@@ -133,3 +133,36 @@
   }
 }
 
+@media (max-width: 480px) {
+  .aboutsection {
+    padding: 0.5rem;
+  }
+
+  .container {
+    padding: 1rem;
+    border-radius: 15px;
+  }
+
+  .aboutme {
+    font-size: 1rem;
+    letter-spacing: 0.15rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .content {
+    gap: 1.5rem;
+  }
+
+  .section {
+    gap: 1rem;
+  }
+
+  .sectionTitle {
+    font-size: 0.875rem;
+  }
+
+  .sectionContent {
+    font-size: 0.75rem;
+  }
+}
+

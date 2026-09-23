@@ -2,7 +2,7 @@ import styles from "./experienceSection.module.css"
 
 function Experience() {
     return (
-        <div className={styles.experiencesection}>
+        <div className={styles.experiencesection} id="experience">
             <div className={styles.container}>
                 <div className={styles.leftSide}>
                     <h2 className={styles.experience}>Experience</h2>

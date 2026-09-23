@@ -3,6 +3,9 @@ import About from '../aboutSection'
 import Skills from '../skillsSection'
 import Experience from '../experienceSection'
 import Projects from '../projectsSection'
+import Education from '../educationSection'
+import Contact from '../contactSection'
+import Footer from '../footer'
 
 function App() {
   return (
@@ -12,6 +15,9 @@ function App() {
       <Skills />
       <Experience />
       <Projects />
+      <Education />
+      <Contact />
+      <Footer />
     </>
   )
 }
