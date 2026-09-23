@@ -25,6 +25,21 @@
   filter: blur(3px);
   margin: 0 0 60px 0;
   text-align: center;
+  
+  /* Typing Loop Animation */
+  animation: typingLoop 4s steps(9, end) infinite;
+}
+
+@keyframes typingLoop {
+  0% {
+    clip-path: inset(0 100% 0 0); /* Hidden */
+  }
+  40%, 60% {
+    clip-path: inset(0 0 0 0);     /* Fully typed and paused */
+  }
+  100% {
+    clip-path: inset(0 100% 0 0); /* Erased back */
+  }
 }
 
 .socialLinks {

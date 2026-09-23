@@ -246,6 +246,24 @@ body {
   white-space: nowrap;
   z-index: 1;
   pointer-events: none;
+  
+  /* Infinite typing loop: typing, pausing, deleting, and repeating */
+  animation: typing 4s steps(9, end) infinite;
+}
+
+@keyframes typing {
+  0% {
+    clip-path: inset(0 100% 0 0); /* Hidden */
+  }
+  40% {
+    clip-path: inset(0 0 0 0);     /* Fully typed out */
+  }
+  60% {
+    clip-path: inset(0 0 0 0);     /* Pause at full text */
+  }
+  100% {
+    clip-path: inset(0 100% 0 0); /* Reversed / deleted back */
+  }
 }
 
 /* Main Content */
