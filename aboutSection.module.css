@@ -1,0 +1,135 @@
+.aboutsection {
+  position: relative;
+  min-height: 500px;
+  padding: 4rem;
+  background: #ffffff;
+  font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  overflow: hidden;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  position: relative;
+  background: #000000;
+  border-radius: 79px;
+  padding: 3rem 4rem 3rem 6rem;
+  box-shadow: 0px 4px 4px rgba(0,0,0,0.25);
+}
+
+.aboutme {
+  position: absolute;
+  left: 2rem;
+  bottom: 2rem;
+  font-size: 1.875rem;
+  font-weight: 300;
+  letter-spacing: 1.65rem;
+  color: #ffffff;
+  transform: rotate(-90deg);
+  transform-origin: left bottom;
+  white-space: nowrap;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+}
+
+.leftColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.rightColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+}
+
+.sectionTitle {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #00e676;
+  margin-bottom: 0.75rem;
+  line-height: 1.5;
+}
+
+.sectionContent {
+  font-size: 0.875rem;
+  font-weight: 300;
+  color: #a6a6a6;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+.rightColumn .sectionTitle {
+  text-align: right;
+}
+
+.rightColumn .sectionContent {
+  text-align: right;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .aboutsection {
+    padding: 2rem;
+  }
+
+  .container {
+    padding: 2rem;
+    border-radius: 40px;
+  }
+
+  .content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .aboutme {
+    position: relative;
+    left: auto;
+    bottom: auto;
+    transform: none;
+    margin-bottom: 2rem;
+    text-align: center;
+    letter-spacing: 0.5rem;
+  }
+
+  .rightColumn .sectionTitle,
+  .rightColumn .sectionContent {
+    text-align: left;
+  }
+}
+
+@media (max-width: 768px) {
+  .aboutsection {
+    padding: 1rem;
+  }
+
+  .container {
+    padding: 1.5rem;
+    border-radius: 20px;
+  }
+
+  .aboutme {
+    font-size: 1.25rem;
+    letter-spacing: 0.25rem;
+  }
+
+  .sectionTitle {
+    font-size: 1rem;
+  }
+
+  .sectionContent {
+    font-size: 0.8rem;
+  }
+}
+
