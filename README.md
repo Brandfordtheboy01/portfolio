@@ -33,7 +33,7 @@ I'm a Computer Science student at Ghana Communication Technology University and 
 
 ## Status
 
-🚧 Currently under development.
+Completed 24 September 2026
 
 ## Contact
 
