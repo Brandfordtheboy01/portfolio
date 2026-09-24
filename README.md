@@ -19,8 +19,8 @@ I'm a Computer Science student at Ghana Communication Technology University and 
 ## Built With
 
 * React
-* TypeScript
-* Tailwind CSS
+* JavaScript 
+* Vanilla CSS
 * Vite
 
 ## Features
