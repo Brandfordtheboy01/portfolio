@@ -63,6 +63,24 @@
   color: #00e676;
 }
 
+.linkButton {
+  font: inherit;
+  font-size: 18px;
+  font-weight: 200;
+  line-height: 16px;
+  color: #a8a2a2;
+  text-decoration: none;
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.linkButton:hover {
+  color: #00e676;
+}
+
 .copyright {
   text-align: center;
   color: #a8a2a2;

@@ -1,50 +1,30 @@
 import { useEffect, useRef } from 'react'
-import { fadeIn, scaleIn, slideInLeft, slideInRight } from '../utils/animations'
 
-export const useScrollAnimation = () => {
-  const sectionRef = useRef(null)
+export default function useScrollAnimation(visibleClassName = 'visible') {
+    const ref = useRef(null)
 
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            const element = entry.target
-            const animationType = element.dataset.animation || 'fadeIn'
-            
-            switch (animationType) {
-              case 'scaleIn':
-                scaleIn(element)
-                break
-              case 'slideInLeft':
-                slideInLeft(element)
-                break
-              case 'slideInRight':
-                slideInRight(element)
-                break
-              default:
-                fadeIn(element)
+    useEffect(() => {
+        const node = ref.current
+        if (!node) return
+
+        const observer = new IntersectionObserver(
+            (entries) => {
+                const [entry] = entries
+                if (entry && entry.isIntersecting) {
+                    node.classList.add(visibleClassName)
+                    observer.unobserve(node)
+                }
+            },
+            {
+                threshold: 0.15,
+                rootMargin: '0px 0px -6% 0px'
             }
-            
-            observer.unobserve(element)
-          }
-        })
-      },
-      { threshold: 0.1 }
-    )
+        )
 
-    if (sectionRef.current) {
-      const animatedElements = sectionRef.current.querySelectorAll('[data-animation]')
-      animatedElements.forEach((el) => observer.observe(el))
-    }
+        observer.observe(node)
 
-    return () => {
-      if (sectionRef.current) {
-        const animatedElements = sectionRef.current.querySelectorAll('[data-animation]')
-        animatedElements.forEach((el) => observer.unobserve(el))
-      }
-    }
-  }, [])
+        return () => observer.disconnect()
+    }, [visibleClassName])
 
-  return sectionRef
+    return ref
 }

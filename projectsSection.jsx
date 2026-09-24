@@ -1,7 +1,9 @@
 import styles from './projectsSection.module.css'
 import { useState } from 'react'
+import useScrollAnimation from './src/hooks/useScrollAnimation'
 
 function Projects() {
+    const ref = useScrollAnimation()
     const [expandedCards, setExpandedCards] = useState({})
 
     const toggleReadMore = (cardId) => {
@@ -12,7 +14,7 @@ function Projects() {
     }
 
     return (
-        <div className={styles.projectssection} id="projects">
+        <div ref={ref} className={`${styles.projectssection} reveal`} id="projects">
             <div className={styles.container}>
                 <div className={styles.header}>
                     <h2 className={styles.title}>Things i've Built</h2>

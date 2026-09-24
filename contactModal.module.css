@@ -1,0 +1,185 @@
+/* ---------- Overlay (backdrop) ---------- */
+.overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 2000;
+    background: rgba(5, 5, 5, 0.7);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(6px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+    animation: fadeIn 0.2s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.sheet {
+    position: relative;
+    width: 100%;
+    max-width: 480px;
+    max-height: 90vh;
+    overflow-y: auto;
+    background: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12);
+    animation: modalIn 0.25s ease;
+}
+
+@keyframes modalIn {
+    from { opacity: 0; transform: translateY(20px) scale(0.97); }
+    to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.dragHandle {
+    display: none;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+}
+
+.title {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #111111;
+    margin: 0;
+}
+
+.closeBtn {
+    background: transparent;
+    border: none;
+    color: #111111;
+    font-size: 1.75rem;
+    line-height: 1;
+    cursor: pointer;
+    padding: 0 0.25rem;
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.closeBtn:hover {
+    color: #000000;
+    transform: rotate(90deg);
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.field label {
+    font-size: 0.85rem;
+    color: #111111;
+    font-weight: 500;
+}
+
+.field input,
+.field textarea {
+    width: 100%;
+    padding: 0.75rem 0.9rem;
+    background: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.18);
+    border-radius: 10px;
+    color: #111111;
+    font-size: 0.95rem;
+    font-family: inherit;
+    outline: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.field input::placeholder,
+.field textarea::placeholder {
+    color: #666666;
+}
+
+.field input:focus,
+.field textarea:focus {
+    border-color: rgba(0, 0, 0, 0.55);
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.05);
+}
+
+.field textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.submitBtn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+    padding: 0.85rem 1.25rem;
+    border-radius: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    background: #111111;
+    color: #ffffff;
+    font-size: 0.95rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.25s ease, transform 0.2s ease;
+}
+
+.submitBtn:hover {
+    background: #000000;
+    transform: translateY(-1px);
+}
+
+.arrow {
+    transition: transform 0.25s ease;
+}
+
+.submitBtn:hover .arrow {
+    transform: translateX(4px);
+}
+
+@media (max-width: 640px) {
+    .overlay {
+        align-items: flex-end;
+        justify-content: center;
+        padding: 0;
+    }
+
+    .sheet {
+        max-width: 100%;
+        width: 100%;
+        max-height: 92vh;
+        border-radius: 22px 22px 0 0;
+        padding: 1.25rem 1.25rem 2rem;
+        animation: sheetIn 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    @keyframes sheetIn {
+        from { transform: translateY(100%); }
+        to { transform: translateY(0); }
+    }
+
+    .dragHandle {
+        display: block;
+        width: 44px;
+        height: 5px;
+        border-radius: 999px;
+        background: rgba(0, 0, 0, 0.2);
+        margin: 0 auto 1rem;
+    }
+
+    .title {
+        font-size: 1.2rem;
+    }
+}

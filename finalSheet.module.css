@@ -1,0 +1,65 @@
+.finalSheet {
+  position: relative;
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  background: linear-gradient(180deg, #000000 0%, #111111 100%);
+  box-sizing: border-box;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+}
+
+.logoContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  width: min(26vw, 220px);
+  height: auto;
+  object-fit: contain;
+  filter: brightness(1.05);
+}
+
+.brandford {
+  font-size: clamp(4rem, 12vw, 12rem);
+  font-weight: 700;
+  line-height: 0.95;
+  background: linear-gradient(180deg, #000000 0%, #00e676 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  filter: blur(3px);
+  text-align: center;
+  animation: typingLoop 4s steps(9, end) infinite;
+}
+
+@keyframes typingLoop {
+  0% {
+    clip-path: inset(0 100% 0 0);
+  }
+  40%, 60% {
+    clip-path: inset(0 0 0 0);
+  }
+  100% {
+    clip-path: inset(0 100% 0 0);
+  }
+}
+
+@media (max-width: 768px) {
+  .logo {
+    width: min(42vw, 180px);
+  }
+}
+
+@media (max-width: 480px) {
+  .logo {
+    width: min(52vw, 150px);
+  }
+}
