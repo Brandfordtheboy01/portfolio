@@ -44,12 +44,6 @@
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.projectCard:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
 }
 
 .projectImage {
@@ -92,11 +86,6 @@
   cursor: pointer;
   padding: 0;
   margin-bottom: 0.75rem;
-  transition: color 0.3s ease;
-}
-
-.readMoreButton:hover {
-  color: #1e4bef;
 }
 
 .checkItOutButton {
@@ -113,13 +102,7 @@
   align-items: center;
   gap: 0.75rem;
   width: fit-content;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
   text-decoration: none;
-}
-
-.checkItOutButton:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0, 230, 118, 0.3);
 }
 
 .arrow {

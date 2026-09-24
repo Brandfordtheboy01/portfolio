@@ -1,8 +1,10 @@
 import styles from './gallerySection.module.css'
 import AccordionGallery from './AccordionGallery'
 import './AccordionGallery.css'
+import useScrollAnimation from './src/hooks/useScrollAnimation'
 
 function GallerySection() {
+    const ref = useScrollAnimation()
     const galleryItems = [
         { 
             image: '/amali.jpeg', 
@@ -28,7 +30,7 @@ function GallerySection() {
     ]
 
     return (
-        <div className={styles.gallerysection} id="gallery">
+        <div ref={ref} className={`${styles.gallerysection} reveal`} id="gallery">
             <div className={styles.container}>
                 <div className={styles.header}>
                     <h2 className={styles.title}>My Journey at Amalitech</h2>

@@ -1,8 +1,11 @@
 import styles from "./experienceSection.module.css"
+import useScrollAnimation from './src/hooks/useScrollAnimation'
 
 function Experience() {
+    const ref = useScrollAnimation()
+
     return (
-        <div className={styles.experiencesection} id="experience">
+        <div ref={ref} className={`${styles.experiencesection} reveal`} id="experience">
             <div className={styles.container}>
                 <div className={styles.leftSide}>
                     <h2 className={styles.experience}>Experience</h2>

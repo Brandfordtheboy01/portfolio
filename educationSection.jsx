@@ -1,9 +1,12 @@
 import styles from './educationSection.module.css'
 import gctuLogo from './src/assets/gctu.png'
+import useScrollAnimation from './src/hooks/useScrollAnimation'
 
 function Education () {
+    const ref = useScrollAnimation()
+
     return(
-        <div className={styles.educationSection} id="education">
+        <div ref={ref} className={`${styles.educationSection} reveal`} id="education">
             <div className={styles.leftColumn}>
                 <img src={gctuLogo} alt="GCTU Logo" className={styles.logo} />
                 <p className={styles.date}>2024 - Present</p>

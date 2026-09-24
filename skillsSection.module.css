@@ -34,12 +34,8 @@
   flex-direction: column;
   align-items: center;
   gap: 1rem;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.skillCard:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+  color: inherit;
 }
 
 .skillIcon {

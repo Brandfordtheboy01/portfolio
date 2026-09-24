@@ -1,71 +1,8 @@
 import styles from './heroSection.module.css'
-import { useState, useEffect, useRef } from 'react'
 
 function HeroSection() {
-    const [isMenuOpen, setIsMenuOpen] = useState(false)
-
-    const toggleMenu = () => {
-        setIsMenuOpen(!isMenuOpen)
-    }
-
-    const closeMenu = () => {
-        setIsMenuOpen(false)
-    }
-
-    useEffect(() => {
-        const handleEscape = (e) => {
-            if (e.key === 'Escape' && isMenuOpen) {
-                closeMenu()
-            }
-        }
-
-        document.addEventListener('keydown', handleEscape)
-        return () => document.removeEventListener('keydown', handleEscape)
-    }, [isMenuOpen])
-
     return (
         <div className={styles.herosection} id="home">
-            <nav className={styles.navbar}>
-                <div className={styles.logoContainer}>
-                    <img src="/brandfordLogo.png" alt="Brandford Logo" className={styles.logo} />
-                </div>
-                <div className={styles.navlinks}>
-                    <a href="#home" className={styles.navlink}>Home</a>
-                    <a href="#about" className={styles.navlink}>About</a>
-                    <a href="#gallery" className={styles.navlink}>Gallery</a>
-                    <a href="#projects" className={styles.navlink}>Projects</a>
-                </div>
-                <a href="mailto:hbrandart@gmail.com" className={styles.ctaButton}>
-                    Get in touch
-                    <span className={styles.arrow}>→</span>
-                </a>
-                <button className={styles.hamburger} onClick={toggleMenu} aria-label="Toggle menu">
-                    <span className={`${styles.hamburgerLine} ${isMenuOpen ? styles.open : ''}`}></span>
-                    <span className={`${styles.hamburgerLine} ${isMenuOpen ? styles.open : ''}`}></span>
-                    <span className={`${styles.hamburgerLine} ${isMenuOpen ? styles.open : ''}`}></span>
-                </button>
-            </nav>
-
-            {/* Mobile Menu */}
-            <div className={`${styles.mobileMenu} ${isMenuOpen ? styles.open : ''}`}>
-                <div className={styles.mobileMenuBlur} onClick={closeMenu}></div>
-                <div className={styles.mobileMenuContent}>
-                    <a href="#home" className={styles.mobileNavLink} onClick={closeMenu}>Home</a>
-                    <a href="#about" className={styles.mobileNavLink} onClick={closeMenu}>About</a>
-                    <a href="#gallery" className={styles.mobileNavLink} onClick={closeMenu}>Gallery</a>
-                    <a href="#skills" className={styles.mobileNavLink} onClick={closeMenu}>Skills</a>
-                    <a href="#experience" className={styles.mobileNavLink} onClick={closeMenu}>Experience</a>
-                    <a href="#projects" className={styles.mobileNavLink} onClick={closeMenu}>Projects</a>
-                    <a href="#education" className={styles.mobileNavLink} onClick={closeMenu}>Education</a>
-                    <a href="#contact" className={styles.mobileNavLink} onClick={closeMenu}>Contact</a>
-                    <div className={styles.mobileSocialLinks}>
-                        <a href="https://github.com/Brandfordtheboy01" target="_blank" rel="noopener noreferrer" className={styles.mobileSocialLink}>GitHub</a>
-                        <a href="https://www.linkedin.com/in/henry-brandford-arthur-junior-3a86053aa" target="_blank" rel="noopener noreferrer" className={styles.mobileSocialLink}>LinkedIn</a>
-                        <a href="mailto:hbrandart@gmail.com" className={styles.mobileSocialLink}>Email</a>
-                    </div>
-                </div>
-            </div>
-
             <div className={styles.portfolioBackground}>Portfolio</div>
 
             <div className={styles.content}>
@@ -88,22 +25,22 @@ function HeroSection() {
             </div>
 
             <div className={styles.skills}>
-                <div className={styles.skillItem}>
+                <a href="https://react.dev" target="_blank" rel="noreferrer" className={styles.skillItem} aria-label="React documentation">
                     <img src="/react.png" alt="React" className={styles.skillIcon} />
                     <span>React</span>
-                </div>
-                <div className={styles.skillItem}>
+                </a>
+                <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noreferrer" className={styles.skillItem} aria-label="JavaScript documentation">
                     <img src="/JS.png" alt="JavaScript" className={styles.skillIcon} />
                     <span>JavaScript</span>
-                </div>
-                <div className={styles.skillItem}>
+                </a>
+                <a href="https://www.typescriptlang.org/docs/" target="_blank" rel="noreferrer" className={styles.skillItem} aria-label="TypeScript documentation">
                     <img src="/typescript.png" alt="TypeScript" className={styles.skillIcon} />
                     <span>TypeScript</span>
-                </div>
-                <div className={styles.skillItem}>
+                </a>
+                <a href="https://docs.python.org/3/" target="_blank" rel="noreferrer" className={styles.skillItem} aria-label="Python documentation">
                     <img src="/python.png" alt="Python" className={styles.skillIcon} />
                     <span>Python</span>
-                </div>
+                </a>
             </div>
         </div>
     );
