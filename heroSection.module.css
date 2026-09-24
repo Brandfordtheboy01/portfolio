@@ -26,13 +26,24 @@ body {
 /* Navigation */
 .navbar {
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: center;
   padding: 2rem 4rem;
   position: relative;
   z-index: 10;
   gap: 2rem;
   min-height: 80px;
+}
+
+.logoContainer {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  height: 90px;
+  width: auto;
+  object-fit: contain;
 }
 
 /* Hamburger Menu */
@@ -445,12 +456,20 @@ body {
   .navbar {
     padding: 1.5rem 2rem;
   }
+
+  .logo {
+    height: 75px;
+  }
 }
 
 @media (max-width: 768px) {
   .navbar {
     justify-content: space-between;
     padding: 1rem 1.5rem;
+  }
+
+  .logo {
+    height: 60px;
   }
 
   .navlinks {
@@ -504,6 +523,10 @@ body {
 @media (max-width: 480px) {
   .navbar {
     padding: 1rem;
+  }
+
+  .logo {
+    height: 35px;
   }
 
   .mobileMenuContent {
