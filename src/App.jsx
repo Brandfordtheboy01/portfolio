@@ -14,7 +14,8 @@ import Preloader from '../preloader'
 
 function App() {
   const [showNavbar, setShowNavbar] = useState(true)
-  // Define the structured data object
+
+  // Explicit schema data telling search engines exactly who you are
   const personSchema = {
     "@context": "https://schema.org",
     "@type": "Person",
@@ -29,6 +30,11 @@ function App() {
 
   return (
     <>
+      {/* Dynamic injection of the JSON-LD schema into your portfolio template */}
+      <script type="application/ld+json">
+        {JSON.stringify(personSchema)}
+      </script>
+
       <Preloader />
       <Navbar isVisible={showNavbar} />
       <HeroSection />
