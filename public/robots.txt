@@ -1,7 +1,4 @@
 User-agent: *
 Allow: /
-Disallow: /src/
-Disallow: /node_modules/
-Disallow: /.git/
 
-Sitemap: https://henrybrandford.vercel.app/sitemap.xml
+Sitemap: https://vercel.app

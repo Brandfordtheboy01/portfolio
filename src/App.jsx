@@ -14,6 +14,18 @@ import Preloader from '../preloader'
 
 function App() {
   const [showNavbar, setShowNavbar] = useState(true)
+  // Define the structured data object
+  const personSchema = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Henry Brandford-Arthur",
+    "jobTitle": "Software Developer",
+    "url": "https://henrybrandford.vercel.app",
+    "sameAs": [
+      "https://github.com/Brandfordtheboy01",
+      "https://www.linkedin.com/in/henry-brandford-arthur-junior-3a86053aa"
+    ]
+  };
 
   return (
     <>
